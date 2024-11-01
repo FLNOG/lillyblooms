@@ -13,7 +13,7 @@ import utils.ConnectionFactory;
 public class ClienteDAO {
 
 	public void cadastrarCliente(Cliente cliente) {
-		String sql = "INSERT INTO CLIENTE (Nome, Email, Telefone) VALUES (?,?,?)";
+		String sql = "INSERT INTO CLIENTE (Nome, Email, Telefone, nascimento) VALUES (?,?,?,?)";
 		
 		PreparedStatement ps = null;
         Connection conn = null;
@@ -25,6 +25,7 @@ public class ClienteDAO {
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getEmail());
             ps.setString(3, cliente.getTelefone());
+            ps.setString(4, cliente.getNascimento());
 
             int rowsAffected = ps.executeUpdate();
             if (rowsAffected > 0) {

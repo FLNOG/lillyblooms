@@ -32,6 +32,9 @@
 
         	<label><strong>Telefone:</strong></label>
         	<input type="text" name="telefone" required><br>
+        	
+        	<label><strong>Data de Nascimento:</strong></label>
+        	<input type="date" name="nascimento" required><br>
 
         	<input type="submit" name="salvar" value="Cadastrar Cliente">
     	</form>

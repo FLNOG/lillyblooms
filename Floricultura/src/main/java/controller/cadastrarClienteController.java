@@ -31,10 +31,12 @@ public class cadastrarClienteController extends HttpServlet {
             
         	String email = request.getParameter("email");
         	String telefone = request.getParameter("telefone");
+        	String nascimento = request.getParameter("nascimento");
 
             cliente.setNome(nome);
             cliente.setEmail(email);
             cliente.setTelefone(telefone);
+            cliente.setNascimento(nascimento);
             
             try {
                 cliente.salvar();
