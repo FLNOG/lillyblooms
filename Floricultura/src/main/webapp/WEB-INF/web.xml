@@ -59,4 +59,24 @@
     <servlet-name>cadastrarClienteController</servlet-name>
     <url-pattern>/cadastrarClienteController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>cadastrarCliente2Controller</display-name>
+    <servlet-name>cadastrarCliente2Controller</servlet-name>
+    <servlet-class>controller.cadastrarCliente2Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cadastrarCliente2Controller</servlet-name>
+    <url-pattern>/cadastrarCliente2Controller</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
 </web-app>

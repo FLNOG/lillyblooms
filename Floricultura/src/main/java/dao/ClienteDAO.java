@@ -12,6 +12,47 @@ import utils.ConnectionFactory;
 
 public class ClienteDAO {
 
+	public void cadastrarDefault(Cliente cliente) {
+		String sql = "INSERT INTO CLIENTE (Nome, Email, Senha) VALUES (?,?,?)";
+		
+		PreparedStatement ps = null;
+        Connection conn = null;
+        
+        try {
+            conn = new ConnectionFactory().getConnection();
+            ps = conn.prepareStatement(sql);
+
+            ps.setString(1, cliente.getNome());
+            ps.setString(2, cliente.getEmail());
+            ps.setString(3, cliente.getSenha());
+
+            int rowsAffected = ps.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Se cadastrou com sucesso!");
+            } else {
+                System.out.println("Nenhuma linha foi inserida.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ps != null) {
+                    ps.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+	}
+	
 	public void cadastrarCliente(Cliente cliente) {
 		String sql = "INSERT INTO CLIENTE (Nome, Email, Telefone, nascimento) VALUES (?,?,?,?)";
 		

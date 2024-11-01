@@ -114,6 +114,10 @@ public class Cliente {
         new ClienteDAO().cadastrarCliente(this);
     }
 	
+	public void salvarDefault() {
+        new ClienteDAO().cadastrarDefault(this);
+    }
+	
 	public void remover() {
         new ClienteDAO().removerCliente(this.idCliente);
     }

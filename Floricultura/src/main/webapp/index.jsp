@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>Lilly Bloom's Loja</title>
+    <title>Lilly Bloom's - Floricultura Online</title>
     <link rel="stylesheet" href="css/loja.css">
 </head>
 <body>
